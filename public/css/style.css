@@ -1,0 +1,176 @@
+body{
+	/*background-image: url('../image/background-light.jpg');*/
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+}
+/* Navbar page CSS Start */
+.navbar.navbar-default{
+	background-color: #2d3247;
+	color: white;
+	border: 0;
+  border-radius: 0;
+  margin-bottom: 0;  
+}
+.navbar.navbar-default .container.top-pad{
+	padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar.navbar-default .navbar-nav>li>a{
+	color: white;
+	font-size: 16px;
+}
+.navbar-brand{
+  padding: 3px 10px;
+}
+.navbar-brand img{
+  width: 66px;
+  height: 46px;
+}
+.navbar-timer{
+  color: white;
+  font-size: 16px;
+  padding-top: 15px;
+}
+/* Navbar page CSS End */
+
+.main-container{
+	margin-top: 60px;	
+}
+.bg-block{
+  background: url('../image/home-bg2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20px 30px;
+  color: white;
+  min-height: 250px;
+  /*height: 500px; */
+}
+.sub-page-container{
+  padding: 40px 60px 60px;
+}
+
+/* Homepage page CSS Start */
+.home-page-wrapper .bg-block .image-block{
+  padding: 20px; 
+  text-align: center;
+}
+.home-page-wrapper .bg-block .image-content img{
+  width: 200px;
+}
+.home-page-wrapper .bg-block .image-content img{
+  margin-bottom: 20px;
+}
+.home-page-wrapper .bg-block .image-title{
+  font-size: 18px;
+}
+
+.section-container{
+  padding: 20px 0;
+  text-align: center;
+}
+.section-container .heading{
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.section-container .sub-heading{
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.benefits-block .portfolio-single-block{
+  padding: 0 30px;
+}
+.benefits-block .image-block{
+  margin-bottom: 30px; 
+}
+.benefits-block .image-block img{
+  width: 160px;
+}
+.benefits-block .content-block{
+  font-size: 16px;
+  text-align: center;  
+}
+.benefits-block .bottom-border{
+  margin: 30px 0 0;
+  border-bottom: 1px solid #d4cccc;
+}
+
+.portfolio-block .img-portfolio1{
+  background: url("../image/portfolio1.jpeg");
+  min-height: 200px;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+.portfolio-block .img-portfolio2{
+  background: url("../image/portfolio2.jpeg");
+  min-height: 200px;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+.portfolio-block .img-portfolio3{
+  background: url("../image/portfolio3.jpeg");
+  min-height: 200px;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+.portfolio-block .img-portfolio4{
+  background: url("../image/portfolio4.jpeg");
+  min-height: 200px;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+/* Homepage page CSS End */
+
+/* About us page CSS Start */
+.about-us-block .content-block{
+  text-align: left;
+}
+.about-us-block .content-block .title{
+  font-size: 16px;
+  font-weight: 100;
+  border-bottom: 1px solid #e0d6d6;
+  padding-bottom: 10px;
+}
+/* About us page CSS End */
+
+/* Contact us page CSS Start */
+.form-container{
+  text-align: left;
+}
+/* Contact us page CSS End */
+
+/* Footer CSS Start */
+.footer-wrapper{
+  background-color: #2d3246;
+  padding: 40px;
+  color: white;
+}
+.footer-wrapper .single-block{
+  padding: 0 25px;
+}
+.footer-wrapper .single-block .heading{
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-wrapper .single-block .heading a{
+  color: white;
+}
+.footer-wrapper .single-block .footer-brand img{
+  width: 65px;
+  margin-left: -10px;
+}
+.footer-wrapper .read-more-block{
+  margin-top: 20px;
+}
+.footer-wrapper .read-more{
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+/* Footer CSS End */
