@@ -8,6 +8,10 @@ class Login extends Component {
          formErrors: {email: '', password: ''}
       };
       this.handleSubmit = this.handleSubmit.bind(this);
+
+      if(localStorage.getItem('survey_user_id')){
+         window.location.href = '/';
+      }
    }
    handleSubmit(event){
       const form = new FormData(event.target);
@@ -17,33 +21,40 @@ class Login extends Component {
       form.set('login', login);
       form.set('password', password);
       form.set('email', '');
-      form.set('client_id', 'vyE3h)g1%DZ9B*B~s18NJsqQPBG8sBeJ^@RCNIgk');
-      form.set('client_secret', 'ZDwSa3t4p7@n#iX$J)4jBsRHn58cK2LFDjG)B~jn');
-      fetch("http://localhost/valency/api/security/login", {
-        method: "POST",
-        body: form,
-        // mode: 'no-cors'
-      }).then(res => res.json())
-        .then( 
-         (result) => {
-            if(result.status === 1){
-               /* for session */
-               localStorage.setItem('survey_user_id', result.data.id);
-               localStorage.setItem('survey_user_token', result.data.token);
-               this.setState(prevState => ({
-                  formErrors: {...prevState.formErrors, password:'Login Successful'} 
-               }));
+      if(login == 'admin@gmail.com' && password == '123456'){
+         localStorage.setItem('survey_user_id', 1);
+         localStorage.setItem('survey_user_token', 'ashdhasdgvgasvgdvagsvdg');
+         window.location.href = '/';
+      } else {
+         this.setState(prevState => ({
+            formErrors: {...prevState.formErrors, password:'Invalid login or password'} 
+         }) );
+      }
+      // fetch("http://localhost/valency/api/security/login", {
+      //   method: "POST",
+      //   body: form,
+      //   // mode: 'no-cors'
+      // }).then(res => res.json())
+      //   .then( 
+      //    (result) => {
+      //       if(result.status === 1){
+      //          /* for session */
+      //          localStorage.setItem('survey_user_id', result.data.id);
+      //          localStorage.setItem('survey_user_token', result.data.token);
+      //          this.setState(prevState => ({
+      //             formErrors: {...prevState.formErrors, password:'Login Successful'} 
+      //          }));
                
-            } else {
-               this.setState(prevState => ({
-                  formErrors: {...prevState.formErrors, password:result.message} 
-               }));
-            }
-         },
-         (error) => {
-            console.log('Error occured');
-         }
-      );
+      //       } else {
+      //          this.setState(prevState => ({
+      //             formErrors: {...prevState.formErrors, password:result.message} 
+      //          }));
+      //       }
+      //    },
+      //    (error) => {
+      //       console.log('Error occured');
+      //    }
+      // );
       // $.ajax({
       //    url: url,
       //    data: data,
